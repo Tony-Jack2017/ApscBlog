@@ -1,0 +1,40 @@
+.about-page {
+  text-align: left;
+  min-height: inherit;
+  background-color: white;
+  .visit {
+    &-title {
+      margin: 20px 0;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    &-desc {
+      font-family: "Poppins-Light", sans-serif;
+    }
+  }
+  .follow {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    .follow-list {
+      display: flex;
+      align-items: center;
+      margin: 24px 0;
+      .follow-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 24px;
+        background-color: #f1f0f0;
+        .iconfont {
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+      :not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

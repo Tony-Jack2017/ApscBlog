@@ -1,0 +1,65 @@
+.home-page {
+  background-color: white;
+  .section {
+  }
+}
+
+.home-page {
+  .section-1 {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    z-index: 0;
+    .banner-bg {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      bottom: -60%;
+      img {
+        width: 100%;
+      }
+    }
+    .hero-banner {
+      background-color: rgba(0, 0, 0, .8);
+      .title {
+        width: 60%;
+        padding: 300px 0;
+        margin: 0 auto;
+        font-size: 48px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .section-2 {
+    .blog-assort {
+      height: 100%;
+    }
+  }
+
+  .blog-author{
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    background-color: #2a2d34;
+    padding: 56px 28px;
+    color: white;
+    .author-name {
+      font-size: 24px;
+      font-weight: 600;
+      padding: 12px;
+    }
+    .author-description {
+      color: rgba(255, 255, 255, .7);
+      font-family: "Poppins-Light", sans-serif;
+    }
+    .author-avatar {
+      .avatar {
+        border: 8px #5b616f solid;
+        margin: 0 auto;
+        box-shadow: .4em .6em 0 rgba(31, 33, 38, .8);
+      }
+    }
+  }
+}

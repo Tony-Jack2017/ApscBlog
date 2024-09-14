@@ -1,0 +1,395 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 4551578 */
+    src: url('../font/icon/iconfont.woff2?t=1715930857529') format('woff2'),
+    url('../font/icon/iconfont.woff?t=1715930857529') format('woff'),
+    url('../font/icon/iconfont.ttf?t=1715930857529') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont", serif !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-telegram-line:before {
+    content: "\eaad";
+}
+
+.icon-translate-2:before {
+    content: "\eacd";
+}
+
+.icon-twitter-fill:before {
+    content: "\eada";
+}
+
+.icon-twitter-line:before {
+    content: "\eadb";
+}
+
+.icon-wechat-2-fill:before {
+    content: "\eb1a";
+}
+
+.icon-wechat-2-line:before {
+    content: "\eb1b";
+}
+
+.icon-wechat-fill:before {
+    content: "\eb1c";
+}
+
+.icon-wechat-line:before {
+    content: "\eb1d";
+}
+
+.icon-bar-chart-fill:before {
+    content: "\e72d";
+}
+
+.icon-bar-chart-2-line:before {
+    content: "\e72c";
+}
+
+.icon-bookmark-line:before {
+    content: "\e72f";
+}
+
+.icon-bookmark-fill:before {
+    content: "\e730";
+}
+
+.icon-send-plane-2-line:before {
+    content: "\e74c";
+}
+
+.icon-send-plane-2-fill:before {
+    content: "\e74d";
+}
+
+.icon-account-circle-fill:before {
+    content: "\e753";
+}
+
+.icon-account-pin-circle-line:before {
+    content: "\e754";
+}
+
+.icon-account-pin-circle-fill:before {
+    content: "\e755";
+}
+
+.icon-account-circle-line:before {
+    content: "\e756";
+}
+
+.icon-android-fill:before {
+    content: "\e75a";
+}
+
+.icon-apple-fill:before {
+    content: "\e75c";
+}
+
+.icon-arrow-down-s-fill:before {
+    content: "\e75e";
+}
+
+.icon-arrow-down-s-line:before {
+    content: "\e75f";
+}
+
+.icon-arrow-right-line:before {
+    content: "\e767";
+}
+
+.icon-article-fill:before {
+    content: "\e76c";
+}
+
+.icon-attachment-2:before {
+    content: "\e76e";
+}
+
+.icon-article-line:before {
+    content: "\e76d";
+}
+
+.icon-check-line:before {
+    content: "\e7a4";
+}
+
+.icon-checkbox-circle-fill:before {
+    content: "\e7a6";
+}
+
+.icon-checkbox-circle-line:before {
+    content: "\e7a7";
+}
+
+.icon-close-circle-fill:before {
+    content: "\e7ae";
+}
+
+.icon-close-circle-line:before {
+    content: "\e7af";
+}
+
+.icon-close-fill:before {
+    content: "\e7b0";
+}
+
+.icon-code-s-slash-line:before {
+    content: "\e7b4";
+}
+
+.icon-css3-fill:before {
+    content: "\e7cd";
+}
+
+.icon-css3-line:before {
+    content: "\e7ce";
+}
+
+.icon-discord-line:before {
+    content: "\e7df";
+}
+
+.icon-discord-fill:before {
+    content: "\e7e0";
+}
+
+.icon-edit-2-fill:before {
+    content: "\e7f8";
+}
+
+.icon-edit-2-line:before {
+    content: "\e7f9";
+}
+
+.icon-eye-fill:before {
+    content: "\e811";
+}
+
+.icon-eye-close-line:before {
+    content: "\e812";
+}
+
+.icon-eye-line:before {
+    content: "\e813";
+}
+
+.icon-eye-off-fill:before {
+    content: "\e814";
+}
+
+.icon-facebook-circle-fill:before {
+    content: "\e815";
+}
+
+.icon-facebook-circle-line:before {
+    content: "\e816";
+}
+
+.icon-facebook-fill:before {
+    content: "\e817";
+}
+
+.icon-facebook-line:before {
+    content: "\e818";
+}
+
+.icon-file-copy-2-fill:before {
+    content: "\e81e";
+}
+
+.icon-file-copy-2-line:before {
+    content: "\e81f";
+}
+
+.icon-filter-2-line:before {
+    content: "\e843";
+}
+
+.icon-filter-2-fill:before {
+    content: "\e845";
+}
+
+.icon-flutter-fill:before {
+    content: "\e851";
+}
+
+.icon-flutter-line:before {
+    content: "\e852";
+}
+
+.icon-git-branch-line:before {
+    content: "\e886";
+}
+
+.icon-git-merge-line:before {
+    content: "\e889";
+}
+
+.icon-github-fill:before {
+    content: "\e88c";
+}
+
+.icon-github-line:before {
+    content: "\e88d";
+}
+
+.icon-image-2-fill:before {
+    content: "\e8b2";
+}
+
+.icon-image-2-line:before {
+    content: "\e8b3";
+}
+
+.icon-image-fill:before {
+    content: "\e8b5";
+}
+
+.icon-image-line:before {
+    content: "\e8b7";
+}
+
+.icon-linkedin-box-line:before {
+    content: "\e8d4";
+}
+
+.icon-linkedin-box-fill:before {
+    content: "\e8d3";
+}
+
+.icon-more-2-line:before {
+    content: "\e926";
+}
+
+.icon-more-2-fill:before {
+    content: "\e927";
+}
+
+.icon-more-line:before {
+    content: "\e928";
+}
+
+.icon-more-fill:before {
+    content: "\e929";
+}
+
+.icon-npmjs-fill:before {
+    content: "\e93d";
+}
+
+.icon-numbers-fill:before {
+    content: "\e944";
+}
+
+.icon-numbers-line:before {
+    content: "\e945";
+}
+
+.icon-palette-line:before {
+    content: "\e953";
+}
+
+.icon-palette-fill:before {
+    content: "\e952";
+}
+
+.icon-pencil-fill:before {
+    content: "\e963";
+}
+
+.icon-pencil-line:before {
+    content: "\e964";
+}
+
+.icon-pushpin-2-fill:before {
+    content: "\e98f";
+}
+
+.icon-pushpin-2-line:before {
+    content: "\e990";
+}
+
+.icon-pushpin-fill:before {
+    content: "\e991";
+}
+
+.icon-pushpin-line:before {
+    content: "\e992";
+}
+
+.icon-qq-fill:before {
+    content: "\e993";
+}
+
+.icon-qq-line:before {
+    content: "\e994";
+}
+
+.icon-reactjs-line:before {
+    content: "\e9a5";
+}
+
+.icon-reactjs-fill:before {
+    content: "\e9a6";
+}
+
+.icon-rocket-2-fill:before {
+    content: "\e9cd";
+}
+
+.icon-rocket-2-line:before {
+    content: "\e9ce";
+}
+
+.icon-rocket-line:before {
+    content: "\e9cf";
+}
+
+.icon-rocket-fill:before {
+    content: "\e9d0";
+}
+
+.icon-settings-2-fill:before {
+    content: "\e9fc";
+}
+
+.icon-settings-2-line:before {
+    content: "\e9fd";
+}
+
+.icon-skull-2-fill:before {
+    content: "\ea42";
+}
+
+.icon-skull-2-line:before {
+    content: "\ea43";
+}
+
+.icon-space-ship-fill:before {
+    content: "\ea50";
+}
+
+.icon-space-ship-line:before {
+    content: "\ea51";
+}
+
+.icon-team-fill:before {
+    content: "\eaaa";
+}
+
+.icon-team-line:before {
+    content: "\eaab";
+}
+
+.icon-telegram-fill:before {
+    content: "\eaac";
+}
+

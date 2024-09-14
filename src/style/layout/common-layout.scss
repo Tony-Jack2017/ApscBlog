@@ -1,0 +1,17 @@
+.container-layout {
+  font-family: Poppins, serif;
+  box-sizing: border-box;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+}
+
+@media (min-width:1200px) and (max-width: 2560px) {
+  .container-layout {
+    max-width: 1200px;
+  }
+}

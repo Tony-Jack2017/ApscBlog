@@ -1,0 +1,59 @@
+.blog-list-page {
+  min-height: inherit;
+  background-color: white;
+  .section-1 {
+    padding-right: 32px;
+    .blog-list {
+      &-header {
+        margin-bottom: 40px;
+      }
+      &-content {
+        display: grid;
+        grid-gap: 32px;
+      }
+    }
+  }
+
+  .section-2 {
+    padding-left: 32px;
+    .part:not(:first-child) {
+      margin-top: 32px;
+    }
+
+    .title {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 20px;
+      margin-left: 12px;
+    }
+
+
+    .blog-author {
+      &-content {
+        display: grid;
+        gap: 32px;
+        .author {
+          display: flex;
+          gap: 32px;
+          &-content {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          &-name {
+            font-size: 24px;
+            font-weight: 500;
+          }
+          .view-action {
+            font-family: "Poppins-Light", sans-serif;
+            color: white;
+            border-radius: 4px;
+            padding: 2px 24px;
+            background-color: rgba(81, 56, 238, .8);
+          }
+        }
+      }
+    }
+  }
+}
