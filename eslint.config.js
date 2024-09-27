@@ -17,6 +17,11 @@ export default tseslint.config(
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
+    overrideConfig: {
+      linterOptions: {
+        reportUnusedDisableDirectives: true,
+      },
+    },
     rules: {
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
