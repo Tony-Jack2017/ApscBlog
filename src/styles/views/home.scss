@@ -8,13 +8,21 @@
   padding-top: 8rem;
   @include flx-ss();
   .info-content {
-    width: 25%;
+
+    width: 28%;
     .calling-card {
-      padding: 2rem;
       background-color: white;
-      .avatar-content {
-        padding: 1rem;
-      }
+    }
+    .info-avtar {
+    }
+    .info-username {
+      color: #1a1a1a;
+      text-transform: uppercase;
+      font-family: "Signika Negative", sans-serif;
+      font-optical-sizing: auto;
+      font-size: 36px;
+      font-weight: bolder;
+      font-style: normal;
     }
   }
   .call-content {

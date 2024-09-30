@@ -1,6 +1,11 @@
-@mixin flx-s() {
+@mixin flx-dr() {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+}
+
+@mixin flx-dc() {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin flx-c() {
@@ -15,7 +20,7 @@
 }
 
 @mixin flx-ss() {
-  @include flx-s();
+  @include flx-dr-s();
   justify-content: space-between;
 }
 
