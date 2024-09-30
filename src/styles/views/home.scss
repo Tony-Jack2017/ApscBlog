@@ -1,0 +1,30 @@
+@import "../common/mixin";
+
+.home-page {
+  position: relative;
+}
+
+.hero-section {
+  padding-top: 8rem;
+  @include flx-ss();
+  .info-content {
+    width: 25%;
+    .calling-card {
+      padding: 2rem;
+      background-color: white;
+      .avatar-content {
+        padding: 1rem;
+      }
+    }
+  }
+  .call-content {
+    width: 60%;
+    .hero-title {
+      font-family: "Edu QLD Beginner", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: 64px;
+      font-weight: bolder;
+    }
+  }
+}

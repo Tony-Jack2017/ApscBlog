@@ -1,0 +1,24 @@
+.card-box {
+  border-radius: 1rem;
+  padding: 3rem;
+  background-color: white;
+  &-isPure {
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.avatar {
+  overflow: hidden;
+  border-radius: 1rem;
+  img { width: 100%; height: 100%}
+
+  &-shape-circle {
+    border-radius: 50%;
+  }
+
+  &-shape-square {
+    border-radius: 12px;
+  }
+}

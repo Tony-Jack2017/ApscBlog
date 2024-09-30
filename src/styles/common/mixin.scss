@@ -1,0 +1,36 @@
+@mixin flx-s() {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flx-c() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flx-cs() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flx-ss() {
+  @include flx-s();
+  justify-content: space-between;
+}
+
+@mixin flx-r-c() {
+  @include flx-c();
+  flex-direction: row;
+}
+
+@mixin flx-c-c() {
+  @include flx-c();
+  flex-direction: column-reverse;
+}
+
+@mixin flx-rv-c() {
+  @include flx-c();
+  flex-direction: row-reverse;
+}
+
