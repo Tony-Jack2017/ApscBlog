@@ -2,7 +2,7 @@ import React, {CSSProperties} from 'react';
 import classNames from "classnames";
 
 interface AvatarItf {
-  shape?: "circle" | "square" | "custom"
+  shape?: "circle" | "square" | "custom" | "default"
   cusWid?: CSSProperties["width"]
   cusHei?: CSSProperties["height"]
   src?: string
@@ -13,7 +13,7 @@ interface AvatarItf {
 const Avatar: React.FC<AvatarItf> = (props) => {
 
   const {
-    src, shape,cusWid, cusHei ,
+    src, shape = "default",cusWid, cusHei ,
     className, style
   } = props
 

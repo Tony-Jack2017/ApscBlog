@@ -9,14 +9,14 @@ const HeroSection = () => {
     <SectionContainer className="hero-section">
       <div className="info-content">
         <Card className="calling-card" isPure={false}>
-          <div className="info-avatar">
+          <div className="calling-avatar">
             <Avatar src={AvatarImg} />
           </div>
-          <div className="info-username">
+          <div className="calling-username">
             Lin Gan
           </div>
-          <div className="info-words">
-
+          <div className="calling-words">
+            Web Designer who has crafted countless user experiences
           </div>
         </Card>
       </div>

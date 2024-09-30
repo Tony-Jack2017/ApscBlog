@@ -6,23 +6,30 @@
 
 .hero-section {
   padding-top: 8rem;
-  @include flx-ss();
+  @include flx(null, flex-start, space-between);
   .info-content {
-
     width: 28%;
     .calling-card {
-      background-color: white;
-    }
-    .info-avtar {
-    }
-    .info-username {
       color: #1a1a1a;
-      text-transform: uppercase;
-      font-family: "Signika Negative", sans-serif;
-      font-optical-sizing: auto;
-      font-size: 36px;
-      font-weight: bolder;
-      font-style: normal;
+      background-color: white;
+      text-align: center;
+      @include flx(column, center, null, 2rem);
+      padding-bottom: 6rem;
+      .calling-avatar {
+        align-content: stretch;
+        width: 100%;
+      }
+      .calling-username {
+        text-transform: uppercase;
+        font-family: "Signika Negative", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 48px;
+        font-weight: bolder;
+        font-style: normal;
+      }
+      .calling-words {
+        font-size: 18px;
+      }
     }
   }
   .call-content {

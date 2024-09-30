@@ -1,41 +1,16 @@
-@mixin flx-dr() {
+@mixin flx($direction, $align, $content, $gap: null) {
   display: flex;
-  flex-direction: row;
-}
-
-@mixin flx-dc() {
-  display: flex;
-  flex-direction: column;
-}
-
-@mixin flx-c() {
-  display: flex;
-  align-items: center;
-}
-
-@mixin flx-cs() {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@mixin flx-ss() {
-  @include flx-dr-s();
-  justify-content: space-between;
-}
-
-@mixin flx-r-c() {
-  @include flx-c();
-  flex-direction: row;
-}
-
-@mixin flx-c-c() {
-  @include flx-c();
-  flex-direction: column-reverse;
-}
-
-@mixin flx-rv-c() {
-  @include flx-c();
-  flex-direction: row-reverse;
+  @if($direction != null) {
+    flex-direction: $direction;
+  }
+  @if($align != null) {
+    align-items: $align;
+  }
+  @if($content != null) {
+    justify-content: $content;
+  }
+  @if($gap != null) {
+    gap: $gap;
+  }
 }
 
