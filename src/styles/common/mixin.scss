@@ -1,5 +1,10 @@
-@mixin flx($direction, $align, $content, $gap: null) {
-  display: flex;
+@mixin flx($direction, $align, $content, $isInline: null, $gap: null) {
+
+  @if($isInline != null) {
+    display: inline-flex;
+  }@else {
+    display: flex;
+  }
   @if($direction != null) {
     flex-direction: $direction;
   }

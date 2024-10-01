@@ -1,3 +1,5 @@
+@import "../../common/mixin";
+
 .card-box {
   border-radius: 1rem;
   padding: 2rem 3rem;
@@ -19,5 +21,17 @@
 
   &-shape-square {
     border-radius: 12px;
+  }
+}
+
+.iconfont {
+  @include flx(row, center, center, true);
+  color: #1a1a1a;
+  padding: .5rem;
+  &-shape-circle {
+    border-radius: 50%;
+  }
+  &-shape-square {
+    border-radius: .5rem;
   }
 }

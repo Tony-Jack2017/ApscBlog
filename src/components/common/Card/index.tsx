@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import {cardAnimate} from "@/common/animation";
 
 interface CardItf {
+  animateDelay?: number,
   isPure?: boolean
   className?: string
   style?: CSSProperties
@@ -13,6 +14,7 @@ interface CardItf {
 const Card: React.FC<CardItf> = (props) => {
 
   const {
+    animateDelay,
     isPure = true,
     className, style,
     children
@@ -31,7 +33,7 @@ const Card: React.FC<CardItf> = (props) => {
   return (
     <motion.div initial={cardAnimate.initial}
                 animate={cardAnimate.animate}
-                transition={cardAnimate.transaction}
+                transition={{ delay: animateDelay ? animateDelay : 0, ...cardAnimate.transaction }}
                 className={innerClass} style={innerStyle}>
       {children}
     </motion.div>

@@ -1,4 +1,5 @@
 @import "../common/mixin";
+@import "../common/var";
 
 .home-page {
   position: relative;
@@ -8,12 +9,13 @@
   padding-top: 8rem;
   @include flx(null, flex-start, space-between);
   .info-content {
-    width: 28%;
+    font-family: "Signika Negative", sans-serif;
+    width: 25%;
     .calling-card {
       color: #1a1a1a;
       background-color: white;
       text-align: center;
-      @include flx(column, center, null, 2rem);
+      @include flx(column, center, null, null,  2rem);
       padding-bottom: 6rem;
       .calling-avatar {
         align-content: stretch;
@@ -21,7 +23,6 @@
       }
       .calling-username {
         text-transform: uppercase;
-        font-family: "Signika Negative", sans-serif;
         font-optical-sizing: auto;
         font-size: 48px;
         font-weight: bolder;
@@ -29,6 +30,30 @@
       }
       .calling-words {
         font-size: 18px;
+      }
+    }
+    .calling-touch {
+      @include flx(row, center, null, null);
+      position: relative;
+      box-sizing: border-box;
+      background-color: $box-bg;
+      margin-top: 3rem;
+      padding: 1rem;
+      border-radius: 100px;
+      .touch {
+        @include flx(row, center, space-evenly);
+        position: absolute;
+        border-radius: 100px;
+        background-color: $primary-color;
+        .bx {
+          font-size: 32px !important;
+        }
+      }
+      .title {
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
       }
     }
   }
