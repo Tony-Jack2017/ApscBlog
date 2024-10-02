@@ -2,7 +2,8 @@ import React, {CSSProperties} from 'react';
 import classNames from "classnames";
 
 interface AvatarItf {
-  shape?: "circle" | "square" | "custom" | "default"
+  shape?: "circle" | "square" | "normal"
+  size?: "default" | "custom" | "small" | "large"
   cusWid?: CSSProperties["width"]
   cusHei?: CSSProperties["height"]
   src?: string
@@ -13,7 +14,11 @@ interface AvatarItf {
 const Avatar: React.FC<AvatarItf> = (props) => {
 
   const {
-    src, shape = "default",cusWid, cusHei ,
+    shape = "normal",
+    size = "default",
+    cusWid,
+    cusHei ,
+    src,
     className, style
   } = props
 
@@ -24,7 +29,7 @@ const Avatar: React.FC<AvatarItf> = (props) => {
   ])
 
   const innerStyle = Object.assign(
-    shape === "custom" ? { width: cusWid, height: cusHei  } : {},
+    size === "custom" ? { width: cusWid, height: cusHei  } : {},
     style
   )
 

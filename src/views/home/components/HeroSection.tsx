@@ -55,7 +55,7 @@ const HeroSection = () => {
                       <Icon key={index} isAction={true} icon={item.icon} size="large"
                             initial={{opacity: 0, x: -20}}
                             animate={{opacity: 1, x: 0}}
-                            transition={{ delay: 1 / (index + 1.8), duration: 1 }}
+                            transition={{ delay: index * 0.2, duration: 1 }}
                       />
                     ))
                   }
