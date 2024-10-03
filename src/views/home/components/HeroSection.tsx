@@ -7,12 +7,23 @@ import Avatar from "@/components/common/Avatar";
 import AvatarImg from "@/assets/img/common/avatar/avatar.png"
 import Icon from "@/components/common/Icon";
 import {useState} from "react";
+import AvatarGroup from "@/components/common/Avatar/Group.tsx";
+
+/* avatar list */
+import Avatar1 from "@/assets/img/common/avatar/avatar_1.png"
+import Avatar2 from "@/assets/img/common/avatar/avatar_2.png"
+import Avatar3 from "@/assets/img/common/avatar/avatar_3.png"
 
 const touchList = [
   {path: "", title: "wechat", icon: "bxs-envelope"},
   {path: "", title: "github", icon: "bxl-github"},
   {path: "", title: "discord", icon: "bxl-discord-alt"},
   {path: "", title: "twitter", icon: "bxl-twitter"},
+]
+
+
+const avatarList = [
+  Avatar1, Avatar2, Avatar3
 ]
 
 const HeroSection = () => {
@@ -32,7 +43,7 @@ const HeroSection = () => {
       <div className="info-content">
         <Card className="calling-card" isPure={false}>
           <div className="calling-avatar">
-            <Avatar src={AvatarImg}/>
+            <Avatar src={AvatarImg} size="auto" />
           </div>
           <div className="calling-username">
             Lin Gan
@@ -69,6 +80,9 @@ const HeroSection = () => {
       <div className="call-content">
         <Card className="hero-title" animateDelay={.5}>
           That’ Me, Welcome to my portfolio
+        </Card>
+        <Card className="our-meta"  animateDelay={1}>
+          <AvatarGroup list={avatarList} offset={32} />
         </Card>
       </div>
     </SectionContainer>

@@ -10,13 +10,11 @@
   @include flx(null, flex-start, space-between);
   .info-content {
     font-family: "Signika Negative", sans-serif;
-    width: 25%;
     .calling-card {
+      @include flx(column, center, null, null,  2rem);
       color: #1a1a1a;
       background-color: white;
       text-align: center;
-      @include flx(column, center, null, null,  2rem);
-      padding-bottom: 6rem;
       .calling-avatar {
         align-content: stretch;
         width: 100%;
@@ -65,6 +63,34 @@
       font-style: normal;
       font-size: 64px;
       font-weight: bolder;
+    }
+  }
+}
+
+
+@media (min-width: 1240px) {
+  .hero-section {
+    .info-content {
+      width: 28%;
+      .calling-card {
+        padding-bottom: 3rem;
+      }
+    }
+    .call-content {
+      .our-meta {
+        padding: 3rem 0 ;
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-section {
+    .info-content {
+      width: 25%;
+      .calling-card {
+        padding-bottom: 6rem;
+      }
     }
   }
 }

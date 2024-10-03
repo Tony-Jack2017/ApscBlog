@@ -16,6 +16,7 @@
 /* Avatar */
 
 .avatar {
+  box-sizing: border-box;
   overflow: hidden;
   border-radius: 1rem;
   img { display: block; width: 100%; height: 100% }
@@ -29,6 +30,7 @@
 }
 
 .avatar-group {
+  position: relative;
   .avatar {
     position: absolute;
   }

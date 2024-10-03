@@ -1,23 +1,23 @@
-import React, {CSSProperties} from 'react';
+import {CSSProperties, forwardRef} from 'react';
 import classNames from "classnames";
+import {motion} from "framer-motion";
+import {computeSize} from "./tools";
 
 interface AvatarItf {
   shape?: "circle" | "square" | "normal"
-  size?: "default" | "custom" | "small" | "large"
-  cusWid?: CSSProperties["width"]
-  cusHei?: CSSProperties["height"]
+  size?: "default" | "small" | "large" | "auto" | [number, number]
+  border?: boolean
   src?: string
   className?: string
   style?: CSSProperties
 }
 
-const Avatar: React.FC<AvatarItf> = (props) => {
+const Avatar = forwardRef<HTMLDivElement, AvatarItf>((props, ref) => {
 
   const {
     shape = "normal",
     size = "default",
-    cusWid,
-    cusHei ,
+    border = false,
     src,
     className, style
   } = props
@@ -29,15 +29,16 @@ const Avatar: React.FC<AvatarItf> = (props) => {
   ])
 
   const innerStyle = Object.assign(
-    size === "custom" ? { width: cusWid, height: cusHei  } : {},
+    size === "auto" ? {} : computeSize(size),
+    border ? { border: "2px solid #ffffff" } : {},
     style
   )
 
   return (
-    <div className={innerClass} style={innerStyle}>
+    <div ref={ref} className={innerClass} style={innerStyle}>
       <img src={src}  alt="avatar"/>
     </div>
   );
-};
+});
 
-export default Avatar;
+export default motion.create(Avatar);
