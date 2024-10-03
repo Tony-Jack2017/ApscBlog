@@ -16,7 +16,7 @@ export const avatarAnimate = (offset: number) => {
     animate: {
       x: offset
     },
-    transition: { delay: 3, duration: 1 }
+    transition: { delay: 1, duration: 1 }
   }
 }
 

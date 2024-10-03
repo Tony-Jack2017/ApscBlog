@@ -52,7 +52,7 @@ const HeroSection = () => {
             Web Designer who has crafted countless user experiences
           </div>
         </Card>
-        <Card className="calling-touch">
+        <Card className="calling-touch" animateDelay={.3}>
           <motion.div
             className="touch"
             whileHover={{width: "calc(100% - 2rem)"}}
@@ -78,11 +78,18 @@ const HeroSection = () => {
         </Card>
       </div>
       <div className="call-content">
-        <Card className="hero-title" animateDelay={.5}>
+        <Card className="hero-title" animateDelay={.6}>
           That’ Me, Welcome to my portfolio
-        </Card>
-        <Card className="our-meta"  animateDelay={1}>
-          <AvatarGroup list={avatarList} offset={32} />
+          <div className="our-meta">
+            <AvatarGroup list={avatarList} offset={32} />
+          </div>
+          <div className="project-list">
+          </div>
+          <div className="power-info">
+            <div className="sub-title">
+              The skills what we
+            </div>
+          </div>
         </Card>
       </div>
     </SectionContainer>

@@ -64,6 +64,12 @@
       font-size: 64px;
       font-weight: bolder;
     }
+    .power-info {
+      @include flx(null, flex-start, null);
+      .sub-title {
+        font-size: 32px;
+      }
+    }
   }
 }
 
@@ -90,6 +96,11 @@
       width: 25%;
       .calling-card {
         padding-bottom: 6rem;
+      }
+    }
+    .call-content {
+      .our-meta {
+        padding: 3rem 0 ;
       }
     }
   }
