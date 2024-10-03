@@ -21,6 +21,14 @@ const touchList = [
   {path: "", title: "twitter", icon: "bxl-twitter"},
 ]
 
+const skillList = [
+  { title: "React", icon: "bxl-react" },
+  { title: "Framer", icon: "bxl-figma" },
+  { title: "Redux", icon: "bxl-redux" },
+  { title: "Golang", icon: "bxl-go-lang" },
+  { title: "C/C++", icon: "bxl-c-plus-plus" },
+]
+
 
 const avatarList = [
   Avatar1, Avatar2, Avatar3
@@ -86,8 +94,23 @@ const HeroSection = () => {
           <div className="project-list">
           </div>
           <div className="power-info">
-            <div className="sub-title">
-              The skills what we
+            <div className="info-title">
+              <div className="sub-title">
+                The Power I Have
+              </div>
+              <div className="sub-content">
+                From front-end to back-end, let technology and creativity continuously push the boundaries.
+              </div>
+            </div>
+            <div className="info-content">
+              {
+                skillList.map((item, index) => (
+                  <div key={index} className="skill-item">
+                    {item.title}
+                    <Icon icon={item.icon} color="white" isPure={true} />
+                  </div>
+                ))
+              }
             </div>
           </div>
         </Card>

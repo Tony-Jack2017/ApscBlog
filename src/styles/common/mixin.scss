@@ -1,4 +1,4 @@
-@mixin flx($direction, $align, $content, $isInline: null, $gap: null) {
+@mixin flx($direction, $align, $content, $isInline: null, $gap: null, $wrap: null) {
 
   @if($isInline != null) {
     display: inline-flex;
@@ -16,6 +16,9 @@
   }
   @if($gap != null) {
     gap: $gap;
+  }
+  @if($wrap != null) {
+    flex-wrap: $wrap;
   }
 }
 
