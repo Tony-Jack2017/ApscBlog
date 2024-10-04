@@ -22,3 +22,24 @@
   }
 }
 
+
+@mixin grid($colNum, $rowNum, $isInline: null, $gap: null) {
+  @if($isInline != null) {
+    display: inline-grid;
+  }@else {
+    display: grid;
+  }
+
+  @if($colNum != null) {
+    grid-template-columns: repeat(1fr, $colNum);
+  }
+
+  @if($rowNum != null) {
+    grid-template-columns: repeat(1fr, $rowNum);
+  }
+
+  @if($gap != null) {
+    gap: $gap;
+  }
+}
+

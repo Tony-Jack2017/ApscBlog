@@ -92,6 +92,24 @@ const HeroSection = () => {
             <AvatarGroup list={avatarList} offset={32} />
           </div>
           <div className="project-list">
+            <motion.div className="list-item work-list" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1, duration: 1 }}>
+              <div className="title">
+                <Icon icon="bx-collection" isPure={true} size="3rem" color={"white"} />
+                <Icon icon="bx-right-arrow-alt" color={"white"}  shape="square" border={true} />
+              </div>
+              <div style={{ paddingTop: "2rem"}}>
+                From concept to execution, enhancing brand value comprehensively.
+              </div>
+            </motion.div>
+            <motion.div className="list-item interest-list" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1, duration: 1 }}>
+              <div className="title">
+                <Icon icon="bxs-collection" isPure={true} size="3rem" />
+                <Icon icon="bx-right-arrow-alt" shape="square" border={true} />
+              </div>
+              <div style={{ paddingTop: "2rem", width: "86%" }}>
+                Our Portfolio: A Journey Through Design and Development
+              </div>
+            </motion.div>
           </div>
           <div className="power-info">
             <div className="info-title">

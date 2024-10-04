@@ -41,7 +41,8 @@
 
 .iconfont {
   color: #1a1a1a;
-  padding: .5rem;
+  padding: .35rem;
+  border-radius: .5rem;
   &-default {
     @include flx(row, center, center, true);
   }

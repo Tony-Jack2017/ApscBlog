@@ -3,6 +3,7 @@ import classNames from "classnames";
 import {motion} from "framer-motion";
 
 interface IconItf {
+  border?: boolean
   isPure?: boolean
   isAction?: boolean
   shape?: "circle" | "square"
@@ -29,16 +30,20 @@ function computeSize(size: IconItf["size"]) {
 const Icon= forwardRef<HTMLDivElement, IconItf>((props, ref) => {
 
   const {
-    isPure = false,isAction = false,
+    isPure = false,isAction = false, border= false,
     shape = "circle", icon, size = "normal",color = "black",
     className, style
   } = props
 
-  const innerStyle = Object.assign(isAction ? { cursor: "pointer" } as CSSProperties : {}, style)
+  const innerStyle = Object.assign(
+    { border: border ? `2px solid ${color}` : "none" },
+    isAction ? { cursor: "pointer" } as CSSProperties : {},
+    style
+  )
 
   const iconStyle = {
     fontSize: computeSize(size),
-    color: color
+    color: color,
   }
 
   const innerClass = classNames([

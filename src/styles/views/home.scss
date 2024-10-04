@@ -63,6 +63,29 @@
       font-size: 64px;
       font-weight: bolder;
     }
+    .project-list {
+      @include flx(null, flex-start, space-between, null, 2.5rem);
+      .list-item {
+        border-radius: 1rem;
+        padding: 2.5rem 2rem;
+        font-size: 20px;
+        font-weight: normal;
+        text-transform: uppercase;
+        .title {
+          @include flx(null, flex-start, space-between);
+        }
+      }
+      .work-list {
+        width: 36%;
+        background-color: $secondary-color;
+      }
+      .interest-list {
+        flex: 1;
+        align-self: stretch;
+        background-color: $primary-color;
+        color: #1a1a1a;
+      }
+    }
     .power-info {
       @include flx(null, flex-start, null, null, 1rem);
       .info-title {
@@ -83,7 +106,7 @@
         @include flx(null, center, null, true, 1rem, wrap);
         .skill-item {
           @include flx(null, center, null, true, 8px);
-          border: 1px solid #848383;
+          border: 2px solid #848383;
           padding: .25rem 1rem;
           border-radius: 100px;
           font-size: 14px;
@@ -104,7 +127,13 @@
     }
     .call-content {
       .our-meta {
-        padding: 3rem 0 ;
+        padding-top: 3rem;
+      }
+      .project-list {
+        padding-top: 3rem;
+      }
+      .power-info {
+        padding-top: 3rem;
       }
     }
   }
@@ -120,7 +149,13 @@
     }
     .call-content {
       .our-meta {
-        padding: 3rem 0 ;
+        padding-top: 3rem;
+      }
+      .project-list {
+        padding-top: 3rem;
+      }
+      .power-info {
+        padding-top: 3rem;
       }
     }
   }
