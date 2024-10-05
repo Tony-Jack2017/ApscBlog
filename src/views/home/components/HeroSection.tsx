@@ -47,7 +47,7 @@ const HeroSection = () => {
   }
 
   return (
-    <SectionContainer className="hero-section">
+    <SectionContainer className="hero-section hero">
       <div className="info-content">
         <Card className="calling-card" isPure={false}>
           <div className="calling-avatar">

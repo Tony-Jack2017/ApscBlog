@@ -2,12 +2,23 @@
 @import "../common/var";
 
 .home-page {
+  color: white;
   position: relative;
+  font-family: "Signika Negative", sans-serif;
+  .section {
+    box-sizing: border-box;
+    &:not(.hero) {
+      padding: 2rem 0;
+      height: 100vh;
+    }
+    &.lr-section {
+      @include flx(null, center, space-between, null, 3rem)
+    }
+  }
 }
 
 .hero-section {
-  padding-top: 8rem;
-  font-family: "Signika Negative", sans-serif;
+  padding: 8rem 0;
   @include flx(null, flex-start, space-between);
   .info-content {
     .calling-card {
@@ -115,6 +126,25 @@
     }
   }
 }
+
+.about-section {
+
+  .about-info {
+    width: 35%;
+    .title {
+      font-weight: bolder;
+      font-size: 64px;
+    }
+    .content {
+      padding-top: 1rem;
+      font-size: 24px;
+    }
+  }
+  .picture-list {
+    flex: 1;
+  }
+}
+
 
 
 @media (min-width: 1240px) {

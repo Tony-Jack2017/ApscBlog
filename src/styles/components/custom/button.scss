@@ -1,12 +1,13 @@
 .cus-btn {
   & button {
-
   }
 }
 
 
 /////  Loading Button  ////
-.cus-loading-btn {
+.cus-gradient-text {
   position: relative;
   overflow: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
