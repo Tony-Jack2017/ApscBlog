@@ -13,10 +13,12 @@
     "boxicons": "^2.1.4",
     "classnames": "^2.5.1",
     "framer-motion": "^11.5.4",
+    "immer": "^10.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.13",
+    "use-immer": "^0.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

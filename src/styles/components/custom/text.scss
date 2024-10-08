@@ -7,3 +7,13 @@
   position: relative;
   overflow: hidden;
 }
+
+.cus-circle-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  transform-origin: center center;
+  will-change: transform;
+  transform: rotate(131.4deg);
+}
