@@ -70,7 +70,7 @@ const WaterFall = forwardRef<HTMLDivElement, WaterFall>((props, ref) => {
                 </Fragment>
               }
             </div>
-          )))
+          ))
         }
       </div>
     </div>

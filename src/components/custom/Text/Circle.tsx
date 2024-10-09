@@ -24,7 +24,7 @@ const CusTextCircle: React.FC<CircleItf> = () => {
       </path>
       <text>
         <textPath href="#curve-wnxkz4" startOffset="0" dominantBaseline="Hanging" fill="white" style={{ letterSpacing: 8, fontSize: 14 }}>
-          SCROLL &nbsp; DOWN
+          SCROLL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DOWN
         </textPath>
       </text>
     </motion.svg>
