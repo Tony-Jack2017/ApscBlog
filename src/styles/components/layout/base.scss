@@ -3,32 +3,36 @@
   width: 100%;
   min-height: 100vh;
 }
-
 .section {
   width: 100%;
   margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.com-container {
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 @media (min-width: 1080px) {
-  .section {
+  .section, .com-container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1440px) {
-  .section {
+  .section, .com-container {
     max-width: 1280px;
   }
 }
 
-@media (min-width: 1680px) {
-  .section {
-    max-width: 1220px;
+@media (min-width: 1728px) {
+  .section, .com-container {
+    max-width: 1420px;
   }
 }
 
 @media (min-width: 1920px) {
-  .section {
-    max-width: 1420px;
+  .section, .com-container {
+    max-width: 1600px;
   }
 }

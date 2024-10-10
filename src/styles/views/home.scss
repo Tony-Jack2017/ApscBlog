@@ -2,7 +2,6 @@
 @import "../common/var";
 
 .home-page {
-  color: white;
   position: relative;
   font-family: "Signika Negative", sans-serif;
   .section {
@@ -13,6 +12,16 @@
     }
     &.lr-section {
       @include flx(null, center, space-between, null, 3rem)
+    }
+  }
+  .header {
+    position: sticky;
+    &-inner {
+      width: 100%;
+      @include flx(null, center, space-between);
+      #logo {
+        img { height: 60px };
+      }
     }
   }
 }

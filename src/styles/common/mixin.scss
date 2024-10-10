@@ -1,4 +1,4 @@
-@mixin flx($direction, $align, $content, $isInline: null, $gap: null, $wrap: null) {
+@mixin flx($direction: null, $align: center, $content: null, $isInline: null, $gap: null, $wrap: null) {
 
   @if($isInline != null) {
     display: inline-flex;

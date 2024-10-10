@@ -1,0 +1,14 @@
+@import "../../common/mixin";
+
+.cus-nav-bar {
+  @include flx(null, center, null, null, 20px);
+  .nav-item {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    @apply text-foreground;
+    &:hover {
+      @apply text-primary;
+    }
+  }
+}
