@@ -35,7 +35,6 @@ const NavBar: React.FC<NavBarItf> = (props) => {
     <div className={innerClass} style={innerStyle}>
       {
         menu.map((item, index) => {
-          console.log(item.icon)
           return (
             <a key={index} href={item.href ? item.href : ""} className="nav-item" onClick={() => { item.onClick ?  item.onClick!(item) : null }}>
               {

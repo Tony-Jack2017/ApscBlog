@@ -32,6 +32,8 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -98,6 +100,11 @@ button:focus-visible {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -124,6 +131,11 @@ button:focus-visible {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
   }
 }
 

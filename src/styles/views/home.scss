@@ -4,6 +4,7 @@
 .home-page {
   position: relative;
   font-family: "Signika Negative", sans-serif;
+  min-height: 100vh;
   .section {
     box-sizing: border-box;
     &:not(.hero) {
@@ -15,7 +16,16 @@
     }
   }
   .header {
-    position: sticky;
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    &-bg {
+      z-index: -1;
+      inset: 0;
+      position: absolute;
+      backdrop-filter: blur(2rem);
+    }
     &-inner {
       width: 100%;
       @include flx(null, center, space-between);
@@ -137,20 +147,42 @@
 }
 
 .about-section {
-  position: sticky;
-  .about-info {
-    width: 35%;
-    .title {
-      font-weight: bolder;
-      font-size: 64px;
-    }
+  padding-top: 16rem !important;
+  .title {
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
     .content {
-      padding-top: 1rem;
-      font-size: 24px;
+      font-weight: 300;
+      font-size: 1rem;
     }
   }
-  .picture-list {
-    flex: 1;
+  .info-content {
+    margin-top: 3rem;
+    @include flx(null, center, space-between, null, 6rem);
+    .about-info {
+      flex: 1;
+      .title {
+        font-weight: bolder;
+        font-size: 64px;
+      }
+      .content {
+        padding-top: 1rem;
+        font-size: 24px;
+      }
+    }
+    .desc-info {
+      flex: 1;
+      .content {
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 0 auto;
+      }
+      .data-list {
+        margin-top: 2rem;
+        @include flx(null, center, space-between)
+      }
+    }
   }
 }
 

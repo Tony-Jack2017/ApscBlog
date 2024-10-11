@@ -585,6 +585,11 @@
   resolved "https://registry.yarnpkg.com/@shikijs/vscode-textmate/-/vscode-textmate-9.3.0.tgz#b2f1776e488c1d6c2b6cd129bab62f71bbc9c7ab"
   integrity sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==
 
+"@studio-freight/lenis@^1.0.42":
+  version "1.0.42"
+  resolved "https://registry.yarnpkg.com/@studio-freight/lenis/-/lenis-1.0.42.tgz#031402beee5eede12649beb9a912abd1aa98f96a"
+  integrity sha512-HJAGf2DeM+BTvKzHv752z6Z7zy6bA643nZM7W88Ft9tnw2GsJSp6iJ+3cekjyMIWH+cloL2U9X82dKXgdU8kPg==
+
 "@types/babel__core@^7.20.5":
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.5.tgz#3df15f27ba85319caa07ba08d0721889bb39c017"
@@ -1393,10 +1398,10 @@ fraction.js@^4.3.7:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
-framer-motion@^11.11.4:
-  version "11.11.4"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.11.4.tgz#8228333e657b9ab51678e760839f70796c40f2a7"
-  integrity sha512-54UE9loF2ZBgyjdMmxzp9kxm0gvYjFfpd7GiThdCCp5+J0P4Oa7pM0yusd9Y3rm/EUAdD+FfgqRXfbK7k3RFiA==
+framer-motion@^11.11.7:
+  version "11.11.7"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.11.7.tgz#3af277845ff690f6935fbcf781fa3eb4146e2321"
+  integrity sha512-89CgILOXPeG3L7ymOTGrLmf8IiKubYLUN/QkYgQuLvehAHfqgwJbLfCnhuyRI4WTds1TXkUp67A7IJrgRY/j1w==
   dependencies:
     tslib "^2.4.0"
 

@@ -1,5 +1,6 @@
-import {CSSProperties, FC} from 'react';
+import {CSSProperties, forwardRef} from 'react';
 import { icons } from 'lucide-react';
+import {motion} from "framer-motion";
 
 interface LucIconItf {
    name: string
@@ -10,12 +11,14 @@ interface LucIconItf {
 }
 
 
-const LucIcon:FC<LucIconItf> = (props) => {
+const LucIcon = forwardRef<HTMLDivElement, LucIconItf>((props, ref) => {
   const { name, color, size } = props
   const LucideIcon = icons[name as keyof typeof icons];
   return (
-    <LucideIcon color={color} size={size} />
+    <div ref={ref}>
+      <LucideIcon color={color} size={size} />
+    </div>
   )
-}
+})
 
-export default LucIcon;
+export default motion.create(LucIcon);

@@ -21,17 +21,17 @@ const navMenu = [
 const Header: React.FC<HeaderItf> = (props) => {
 
   const {style} = props
-
   const innerClass = classNames(
-    "header"
+    "header",
+    "shadow-md"
   )
-
   const innerStyle = {
     ...style,
   }
 
   return (
     <header className={innerClass} style={innerStyle}>
+      <div className="header-bg"></div>
       <ComContainer className="header-inner">
         <div id="logo">
           <img src={LogoBrand} alt="logo" />
