@@ -26,7 +26,7 @@ const infoList = [
 
 const AboutSection = () => {
   return (
-    <SectionContainer className="about-section" isSticky={true} style={{ top: 0, zIndex: 1 }}>
+    <SectionContainer id="about" className="about-section" isSticky={true} style={{ top: 0, zIndex: 1 }}>
       <div className="title text-primary-foreground">
         ABOUT ME
         <p className="content">

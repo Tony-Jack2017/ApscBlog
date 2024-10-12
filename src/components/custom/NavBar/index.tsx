@@ -24,26 +24,41 @@ const NavBar: React.FC<NavBarItf> = (props) => {
     className, style
   } = props
 
-    const innerClass = classNames([
-      "cus-nav-bar",
-      className
-    ])
+  const innerClass = classNames([
+    "cus-nav-bar",
+    className
+  ])
 
-    const innerStyle = Object.assign({}, style)
+  const innerStyle = Object.assign({}, style)
+
+
+  /* handle click */
+
+  const handleClick = (item: NavItemType) => {
+    if (item.onClick){
+      item.onClick(item)
+    }
+    if(item.href) {
+      const target = document.querySelector(item.href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 
   return (
     <div className={innerClass} style={innerStyle}>
       {
         menu.map((item, index) => {
           return (
-            <a key={index} href={item.href ? item.href : ""} className="nav-item" onClick={() => { item.onClick ?  item.onClick!(item) : null }}>
+            <a key={index} href={item.href ? item.href : ""} className="nav-item" onClick={() => { handleClick(item) }}>
               {
                 item.icon
                   ? React.isValidElement(item.icon)
                     ? item.icon
-                    : (<LucIcon name={item.icon as string} />)
-                  : null }
-              { item.title ? <span>{ item.title }</span> : null }
+                    : (<LucIcon name={item.icon as string}/>)
+                  : null}
+              {item.title ? <span>{item.title}</span> : null}
             </a>
           )
         })

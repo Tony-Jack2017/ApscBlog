@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 interface SectionContainerItf {
   isSticky?: boolean
+  id?: string
   className?: string
   style?: CSSProperties
   children?: ReactNode
@@ -12,7 +13,7 @@ const SectionContainer: React.FC<SectionContainerItf> = (props) => {
 
   const {
     isSticky,
-    className, style,
+    id, className, style,
     children
   } = props
 
@@ -27,7 +28,7 @@ const SectionContainer: React.FC<SectionContainerItf> = (props) => {
   } as CSSProperties
 
   return (
-    <section className={innerClass} style={innerStyle}>
+    <section id={id} className={innerClass} style={innerStyle}>
       {children}
     </section>
   );
