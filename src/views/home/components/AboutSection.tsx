@@ -2,6 +2,7 @@ import SectionContainer from "@/components/layout/base/SectionContainer.tsx";
 import {OrbitingCirclesDemo} from "@/components/custom/Orbiting";
 import HyperText from "@/components/ui/hyper-text.tsx";
 import {RainbowButton} from "@/components/ui/rainbow-button.tsx";
+import ComContainer from "@/components/layout/base/ComContainer.tsx";
 
 
 const InfoData = ({ data, title }: { data: string, title: string }) => {
@@ -26,40 +27,42 @@ const infoList = [
 
 const AboutSection = () => {
   return (
-    <SectionContainer id="about" className="about-section" isSticky={true} style={{ top: 0, zIndex: 1 }}>
-      <div className="title text-primary-foreground">
-        ABOUT ME
-        <p className="content">
-          This is my introduction
-        </p>
-      </div>
-      <div className="info-content">
-        <div className="about-info">
-          <OrbitingCirclesDemo />
+    <SectionContainer id="about" className="about-section" isSticky={true} style={{ top: 0, zIndex: 1}}>
+      <ComContainer>
+        <div className="title text-primary-foreground">
+          ABOUT ME
+          <p className="content">
+            This is my introduction
+          </p>
         </div>
-        <div className="desc-info">
-          <div className="content">
-            <p>
-              Currently pursuing my BTech in Computer Science from VITB, I gained interest in UI designing during my 2nd year. Been working to make that interest into a career ever since.
-              I love listening to music (you'll never catch me without my headphones), I'm a huge dog person, and I like to procrastinate by binging YouTube and anime.  I strongly believe that the internet should be more fun, starting with websites.
-            </p>
-            <div className="data-list">
-              {
-                infoList.map((item, index) => {
-                  return (
-                    <InfoData key={index} data={item.data} title={item.title} />
-                  )
-                })
-              }
-            </div>
-            <div className="mt-8">
-              <RainbowButton>
-                View My Resume
-              </RainbowButton>
+        <div className="about-content">
+          <div className="about-info">
+            <OrbitingCirclesDemo />
+          </div>
+          <div className="desc-info">
+            <div className="content">
+              <p>
+                Currently pursuing my BTech in Computer Science from VITB, I gained interest in UI designing during my 2nd year. Been working to make that interest into a career ever since.
+                I love listening to music (you'll never catch me without my headphones), I'm a huge dog person, and I like to procrastinate by binging YouTube and anime.  I strongly believe that the internet should be more fun, starting with websites.
+              </p>
+              <div className="data-list">
+                {
+                  infoList.map((item, index) => {
+                    return (
+                      <InfoData key={index} data={item.data} title={item.title} />
+                    )
+                  })
+                }
+              </div>
+              <div className="mt-8">
+                <RainbowButton>
+                  View My CV
+                </RainbowButton>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </ComContainer>
     </SectionContainer>
   )
 }

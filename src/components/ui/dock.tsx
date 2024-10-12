@@ -18,7 +18,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max gap-2 rounded-2xl border p-2 backdrop-blur-md",
+  "supports-backdrop-blur:bg-white/10 shadow-lg supports-backdrop-blur:dark:bg-black/10 mx-auto flex flex-col w-[58px] h-max gap-2 rounded-2xl border p-2 backdrop-blur-md z-50",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -33,14 +33,14 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     },
     ref,
   ) => {
-    const mouseX = useMotionValue(Infinity);
+    const mouseY = useMotionValue(Infinity);
 
     const renderChildren = () => {
       return React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === DockIcon) {
           return React.cloneElement(child, {
             ...child.props,
-            mouseX: mouseX,
+            mouseY: mouseY,
             magnification: magnification,
             distance: distance,
           });
@@ -52,8 +52,10 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     return (
       <motion.div
         ref={ref}
-        onMouseMove={(e) => mouseX.set(e.pageX)}
-        onMouseLeave={() => mouseX.set(Infinity)}
+        onMouseMove={(e) => {
+          mouseY.set(e.clientY)
+        }}
+        onMouseLeave={() => mouseY.set(Infinity)}
         {...props}
         className={cn(dockVariants({ className }), {
           "items-start": direction === "top",
@@ -73,7 +75,7 @@ export interface DockIconProps {
   size?: number;
   magnification?: number;
   distance?: number;
-  mouseX?: any;
+  mouseY?: any;
   className?: string;
   children?: React.ReactNode;
   props?: PropsWithChildren;
@@ -83,26 +85,27 @@ const DockIcon = ({
   size,
   magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
-  mouseX,
+  mouseY,
   className,
   children,
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const distanceCalc = useTransform(mouseX, (val: number) => {
-    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+  const distanceCalc = useTransform(mouseY, (val: number) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
 
-    return val - bounds.x - bounds.width / 2;
+    return val - bounds.y - bounds.height / 2;
   });
 
-  let widthSync = useTransform(
+
+  let heightSync = useTransform(
     distanceCalc,
     [-distance, 0, distance],
     [40, magnification, 40],
   );
 
-  let width = useSpring(widthSync, {
+  let height = useSpring(heightSync, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
@@ -111,7 +114,7 @@ const DockIcon = ({
   return (
     <motion.div
       ref={ref}
-      style={{ width }}
+      style={{ height }}
       className={cn(
         "flex aspect-square cursor-pointer items-center justify-center rounded-full",
         className,

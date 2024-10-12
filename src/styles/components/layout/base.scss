@@ -11,28 +11,33 @@
 .com-container {
   margin: 0 auto;
   padding: 1rem;
+  &.container-full {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 1080px) {
-  .section, .com-container {
+  .com-container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1440px) {
-  .section, .com-container {
+  .com-container {
     max-width: 1280px;
   }
 }
 
 @media (min-width: 1728px) {
-  .section, .com-container {
+  .com-container {
     max-width: 1420px;
   }
 }
 
 @media (min-width: 1920px) {
-  .section, .com-container {
+  .com-container {
     max-width: 1600px;
   }
 }
