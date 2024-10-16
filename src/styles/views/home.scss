@@ -51,17 +51,48 @@
     width: 100%;
     @include flx(null, center, space-between, null, 6rem);
     .info-content {
-      flex: 1;
+      width: 40%;
       .username {
         .tip {
           font-weight: lighter;
-          font-size: 1rem;
+          font-size: 3rem;
         }
         font-weight: bolder;
         font-size: 6rem;
       }
+      .desc {
+        &-item {
+          padding-top: .75rem;
+          &:not(:first-child) {
+            margin-top: 1rem;
+          }
+        }
+        ul {
+          list-style: inside;
+          li {
+            &::marker {
+              margin-left: .75rem;
+            }
+          }
+        }
+        .motto {
+          p {
+            &:not(:first-child) {
+              margin-top: .5rem;
+            }
+          }
+        }
+        .skill {
+          @include flx(null, center, null, null, 2rem);
+          font-weight: bolder;
+        }
+      }
+      .call {
+        margin-top: 3rem;
+        @include flx(null, center, null, null, 2rem)
+      }
     }
-    .call-content {
+    .banner-content {
       flex: 1;
     }
   }
@@ -162,7 +193,7 @@
 @media (min-width: 1080px) {
   .home-page {
     .social {
-      left: 1%;
+      left: 5vw;
     }
   }
 }
@@ -170,7 +201,7 @@
 @media (min-width: 1440px) {
   .home-page {
     .social {
-      left: 2%;
+      left: 2vw;
     }
   }
 }
@@ -178,7 +209,7 @@
 @media (min-width: 1728px) {
   .home-page {
     .social {
-      left: 8%;
+      left: 3vw;
     }
   }
 }
@@ -186,7 +217,7 @@
 @media (min-width: 1920px) {
   .home-page {
     .social {
-      left: 10%;
+      left: 4vw;
     }
   }
 }
