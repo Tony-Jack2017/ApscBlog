@@ -1,0 +1,35 @@
+@import "../../common/var";
+
+.cus-input {
+  min-width: 180px;
+  label {
+    display: block;
+    font-size: .85rem;
+  }
+  input, textarea {
+    font-size: 1rem;
+    background: transparent;
+    outline: none;
+  }
+}
+
+
+.cus-input-default {
+  input, textarea {
+    width: 100%;
+    font-weight: bolder;
+    padding: 0 .5rem;
+    border-radius: .5rem;
+    border: 2px solid $primary-color-3;
+    @apply bg-primary-foreground;
+    &::placeholder {
+      font-weight: lighter;
+    }
+    &:focus{
+      @apply border-2 border-primary-foreground bg-transparent;
+    }
+  }
+  textarea {
+    width: 100%;
+  }
+}

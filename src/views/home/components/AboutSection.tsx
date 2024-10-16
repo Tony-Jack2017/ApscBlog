@@ -3,6 +3,7 @@ import {OrbitingCirclesDemo} from "@/components/custom/Orbiting";
 import HyperText from "@/components/ui/hyper-text.tsx";
 import {RainbowButton} from "@/components/ui/rainbow-button.tsx";
 import ComContainer from "@/components/layout/base/ComContainer.tsx";
+import LucIcon from "@/components/common/Icon/LucIcon.tsx";
 
 
 const InfoData = ({ data, title }: { data: string, title: string }) => {
@@ -57,6 +58,16 @@ const AboutSection = () => {
               <div className="mt-8">
                 <RainbowButton>
                   View My CV
+                  <LucIcon
+                    name="ChevronsRight"
+                    initial={{ x: 0 }}
+                    animate={{ x: 8 }}
+                    transition={{
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      duration: 1, ease: "easeInOut"
+                    }}
+                  />
                 </RainbowButton>
               </div>
             </div>

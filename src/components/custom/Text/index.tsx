@@ -19,16 +19,11 @@ const CusText = forwardRef<HTMLSpanElement, TextItf>((props, ref) => {
 
   const innerClass = classNames([
     "cus-text",
+    {"cus-text-gradient": isGradient },
     className
   ])
 
-  const innerStyle = Object.assign(
-    isGradient ? {
-      background: "linear-gradient(90deg, #c5ff41 0%, #f46d38 100%)",
-      color: "transparent",
-      backgroundClip: "text",
-      textFillColor: "transparent",
-    } : {},
+  const innerStyle = Object.assign({},
     style ? style : null
   ) as CSSProperties
 

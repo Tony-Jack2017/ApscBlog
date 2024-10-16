@@ -40,125 +40,39 @@
     position: fixed;
     z-index: 100;
     top: 30%;
-    left: 10%;
   }
 }
 
 .hero-section {
-  padding: 8rem 0;
-  @include flx(null, flex-start, space-between);
-  .info-content {
-    .calling-card {
-      @include flx(column, center, null, null,  2rem);
-      color: #1a1a1a;
-      background-color: white;
-      text-align: center;
-      .calling-avatar {
-        align-content: stretch;
-        width: 100%;
-      }
-      .calling-username {
-        text-transform: uppercase;
-        font-optical-sizing: auto;
-        font-size: 48px;
-        font-weight: bolder;
-        font-style: normal;
-      }
-      .calling-words {
-        font-size: 18px;
-      }
-    }
-    .calling-touch {
-      @include flx(row, center, null, null);
-      position: relative;
-      box-sizing: border-box;
-      background-color: $box-bg;
-      margin-top: 3rem;
-      padding: 1rem;
-      border-radius: 100px;
-      .touch {
-        @include flx(row, center, space-evenly);
-        position: absolute;
-        border-radius: 100px;
-        background-color: $primary-color;
-        .bx {
-          font-size: 32px !important;
-        }
-      }
-      .title {
-        width: 100%;
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
-      }
-    }
+  &.section {
+    @include flx(null, center, center);
   }
-  .call-content {
-    width: 60%;
-    .hero-title {
-      font-optical-sizing: auto;
-      font-style: normal;
-      font-size: 64px;
-      font-weight: bolder;
-    }
-    .project-list {
-      @include flx(null, flex-start, space-between, null, 2.5rem);
-      .list-item {
-        border-radius: 1rem;
-        padding: 2.5rem 2rem;
-        font-size: 20px;
-        font-weight: normal;
-        text-transform: uppercase;
-        .title {
-          @include flx(null, flex-start, space-between);
+  .hero-content {
+    width: 100%;
+    @include flx(null, center, space-between, null, 6rem);
+    .info-content {
+      flex: 1;
+      .username {
+        .tip {
+          font-weight: lighter;
+          font-size: 1rem;
         }
-      }
-      .work-list {
-        width: 36%;
-        background-color: $secondary-color;
-      }
-      .interest-list {
-        flex: 1;
-        align-self: stretch;
-        background-color: $primary-color;
-        color: #1a1a1a;
+        font-weight: bolder;
+        font-size: 6rem;
       }
     }
-    .power-info {
-      @include flx(null, flex-start, null, null, 1rem);
-      .info-title {
-        flex: 1;
-        .sub-title {
-          font-size: 32px;
-          padding-bottom: 1rem;
-        }
-        .sub-content {
-          color: #848383;
-          font-size: 20px;
-          font-weight: 300;
-        }
-      }
-      .info-content {
-        padding-top: 1rem;
-        width: 50%;
-        @include flx(null, center, null, true, 1rem, wrap);
-        .skill-item {
-          @include flx(null, center, null, true, 8px);
-          border: 2px solid #848383;
-          padding: .25rem 1rem;
-          border-radius: 100px;
-          font-size: 14px;
-        }
-      }
+    .call-content {
+      flex: 1;
     }
   }
 }
 
 .about-section {
   z-index: 2;
-  padding-top: 16rem !important;
+  @include flx(null, center, center);
   &.section {
     @apply bg-secondary;
+    min-height: 100vh;
   }
   .title {
     font-weight: bold;
@@ -201,7 +115,7 @@
 .contact-section {
   position: relative;
   z-index: 5;
-  padding-top: 16rem !important;
+  @include flx(null, center, center);
   .title {
     font-weight: bold;
     font-size: 3rem;
@@ -212,7 +126,22 @@
     }
   }
   .contact-content {
-
+    margin-top: 4rem;
+    padding: 3rem;
+    .send-email-form {
+      padding: 3rem 4rem;
+      width: 40vw;
+      .form-header {
+        width: 100%;
+        @include flx(null, center, null, null, 36px)
+      }
+      .form-message {
+        margin-top: 2rem;
+      }
+      .form-action {
+        margin-top: 2rem;
+      }
+    }
   }
   .footer {
     width: 100%;
@@ -222,7 +151,7 @@
     padding: 1rem;
     .maker {
       text-transform: uppercase;
-      font-size: 64px;
+      font-size: 1rem;
       font-weight: bolder;
       font-family: "Edu QLD Beginner", sans-serif;
     }
@@ -230,46 +159,37 @@
 }
 
 
-@media (min-width: 1240px) {
-  .hero-section {
-    .info-content {
-      width: 28%;
-      .calling-card {
-        padding-bottom: 3rem;
-      }
+@media (min-width: 1080px) {
+  .home-page {
+    .social {
+      left: 1%;
     }
-    .call-content {
-      .our-meta {
-        padding-top: 3rem;
-      }
-      .project-list {
-        padding-top: 3rem;
-      }
-      .power-info {
-        padding-top: 3rem;
-      }
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-page {
+    .social {
+      left: 2%;
+    }
+  }
+}
+
+@media (min-width: 1728px) {
+  .home-page {
+    .social {
+      left: 8%;
     }
   }
 }
 
 @media (min-width: 1920px) {
-  .hero-section {
-    .info-content {
-      width: 25%;
-      .calling-card {
-        padding-bottom: 6rem;
-      }
-    }
-    .call-content {
-      .our-meta {
-        padding-top: 3rem;
-      }
-      .project-list {
-        padding-top: 3rem;
-      }
-      .power-info {
-        padding-top: 3rem;
-      }
+  .home-page {
+    .social {
+      left: 10%;
     }
   }
 }
+
+
+

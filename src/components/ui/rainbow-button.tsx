@@ -1,6 +1,5 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import LucIcon from "@/components/common/Icon/LucIcon.tsx";
 interface RainbowButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
@@ -28,16 +27,6 @@ export function RainbowButton({
       {...props}
     >
       {children}
-      <LucIcon
-        name="ChevronsRight"
-        initial={{ x: 0 }}
-        animate={{ x: 8 }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "reverse",
-          duration: 1, ease: "easeInOut"
-      }}
-      />
     </button>
   );
 }
