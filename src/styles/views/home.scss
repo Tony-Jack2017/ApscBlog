@@ -11,7 +11,6 @@
     @apply bg-background;
     &:not(.hero) {
       padding: 2rem 0;
-      height: 100vh;
     }
     &.lr-section {
       @include flx(null, center, space-between, null, 3rem)
@@ -99,7 +98,8 @@
 }
 
 .about-section {
-  z-index: 2;
+  top: 0;
+  z-index: 1;
   @include flx(null, center, center);
   &.section {
     @apply bg-secondary;
@@ -140,6 +140,37 @@
         @include flx(null, center, space-between)
       }
     }
+  }
+}
+
+.work-section {
+  position: relative;
+  z-index: 2;
+  &.section {
+    min-height: 100vh;
+  }
+  .title {
+    padding-top: 6rem;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    .content {
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+  .portfolio-content {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.life-section {
+  top: 0;
+  z-index: 3;
+  &.section {
+    @apply bg-secondary;
+    min-height: 100vh;
   }
 }
 

@@ -26,7 +26,7 @@ const boxVariants = {
 
 const ContactSection = () => {
   return (
-    <SectionContainer isSticky={true} id="contact" className="contact-section">
+    <SectionContainer id="contact" className="contact-section">
       <ComContainer>
         <div className="title">
           GET IN <CusText isGradient={true}>TOUCH</CusText> TO ME

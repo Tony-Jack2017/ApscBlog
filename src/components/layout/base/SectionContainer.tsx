@@ -24,7 +24,7 @@ const SectionContainer: React.FC<SectionContainerItf> = (props) => {
 
   const innerStyle = {
     ...style,
-    position: isSticky ? "sticky" : "static",
+    position: isSticky ? "sticky" : "",
   } as CSSProperties
 
   return (

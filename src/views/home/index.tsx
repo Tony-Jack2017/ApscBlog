@@ -8,6 +8,8 @@ import ContactSection from "@/views/home/components/ContactSection.tsx";
 import {DockDemo} from "@/components/custom/DockDemo";
 import ComContainer from "@/components/layout/base/ComContainer.tsx";
 import HeroSection from "@/views/home/components/HeroSection.tsx";
+import WorkSection from "@/views/home/components/WorkSection.tsx";
+import LifeSection from "@/views/home/components/LifeSection.tsx";
 
 const HomePage = () => {
   return (
@@ -16,6 +18,8 @@ const HomePage = () => {
       <ComContainer isFull={true}>
         <HeroSection />
         <AboutSection />
+        <WorkSection />
+        <LifeSection />
         <ContactSection />
       </ComContainer>
       {/* Something Extra */}
