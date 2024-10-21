@@ -10,6 +10,7 @@ import ComContainer from "@/components/layout/base/ComContainer.tsx";
 import HeroSection from "@/views/home/components/HeroSection.tsx";
 import WorkSection from "@/views/home/components/WorkSection.tsx";
 import LifeSection from "@/views/home/components/LifeSection.tsx";
+import PortFolioSection from "@/views/home/components/PortFolioSection.tsx";
 
 const HomePage = () => {
   return (
@@ -18,8 +19,9 @@ const HomePage = () => {
       <ComContainer isFull={true}>
         <HeroSection />
         <AboutSection />
-        <WorkSection />
+        <PortFolioSection />
         <LifeSection />
+        <WorkSection />
         <ContactSection />
       </ComContainer>
       {/* Something Extra */}

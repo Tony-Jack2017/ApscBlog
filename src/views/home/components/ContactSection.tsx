@@ -6,7 +6,6 @@ import MagicCard from "@/components/ui/magic-card.tsx";
 import CusInput from "@/components/custom/Input";
 import {RainbowButton} from "@/components/ui/rainbow-button.tsx";
 import LucIcon from "@/components/common/Icon/LucIcon.tsx";
-import CusText from "@/components/custom/Text";
 
 const boxVariants = {
   hidden:{
@@ -29,7 +28,7 @@ const ContactSection = () => {
     <SectionContainer id="contact" className="contact-section">
       <ComContainer>
         <div className="title">
-          GET IN <CusText isGradient={true}>TOUCH</CusText> TO ME
+          GET IN <span style={{ color: "white" }}>TOUCH</span> TO ME
           <p className="content">
             Send message to me
           </p>
@@ -60,7 +59,7 @@ const ContactSection = () => {
         </motion.div>
         <div className="footer">
           <ComContainer className="maker text-center">
-            MADE BY ❤ <span className="text-secondary">APSC BUILDER</span>
+            MADE BY ❤ <span>APSC BUILDER</span>
           </ComContainer>
         </div>
       </ComContainer>

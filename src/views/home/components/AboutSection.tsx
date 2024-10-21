@@ -31,7 +31,7 @@ const AboutSection = () => {
     <SectionContainer id="about" className="about-section" isSticky={true}>
       <ComContainer>
         <div className="title text-primary-foreground">
-          ABOUT ME
+          ABOUT <span style={{ color: "white" }}>ME</span>
           <p className="content">
             This is my introduction
           </p>
